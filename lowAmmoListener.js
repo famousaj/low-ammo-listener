@@ -32,3 +32,6 @@ channel
   .subscribe();
 
 console.log('📡 Listening for low ammo notifications...');
+// Force keep-alive (for Railway or any hosting)
+setInterval(() => {}, 1000 * 60 * 60); // every hour
+
