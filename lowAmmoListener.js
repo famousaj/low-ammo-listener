@@ -29,9 +29,19 @@ channel
       console.error('❌ Email send failed:', await res.text());
     }
   })
-  .subscribe();
+  .subscribe(async (status) => {
+    console.log('🔄 Realtime subscription status:', status);
 
-console.log('📡 Listening for low ammo notifications...');
-// Force keep-alive (for Railway or any hosting)
-setInterval(() => {}, 1000 * 60 * 60); // every hour
+    if (status === 'SUBSCRIBED') {
+      console.log('✅ Successfully connected to Supabase Realtime');
+    } else if (status === 'CHANNEL_ERROR') {
+      console.error('❌ Channel error. Exiting.');
+      process.exit(1);
+    }
+  });
+
+// 👇 This keeps the container alive on Railway
+setInterval(() => {
+  console.log('⏳ Still running...');
+}, 1000 * 60 * 5); // Every 5 minutes
 
