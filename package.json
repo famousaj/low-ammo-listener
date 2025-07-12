@@ -1,0 +1,12 @@
+{
+  "name": "low-ammo-listener",
+  "type": "module",
+  "version": "1.0.0",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.6",
+    "node-fetch": "^2.6.7"
+  },
+  "scripts": {
+    "start": "node lowAmmoListener.js"
+  }
+}
