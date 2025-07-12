@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 
 const supabase = createClient('https://tuopewzbymuxjeesnvbx.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR1b3Bld3pieW11eGplZXNudmJ4Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1MTMwODY5MywiZXhwIjoyMDY2ODg0NjkzfQ.aukGKHKyWdfuxO5RTfH8inL3HaJZJnr13lyJw2ZgHM0');
 
-const emailFunctionUrl = 'https://YOUR-PROJECT.functions.supabase.co/send-email-resend';
+const emailFunctionUrl = 'https://tuopewzbymuxjeesnvbx.supabase.co/functions/v1/send-email-resend';
 
 const myEmail = 'amameajunior@gmail.com';
 
